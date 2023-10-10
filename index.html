@@ -14,26 +14,6 @@
 
     <title>Frontend Mentor | Results summary component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍
-    
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-    -->
     <style>
       @font-face {
         font-family: "Hanken Grotesk";
@@ -44,7 +24,7 @@
         font-family: "Hanken Grotesk";
       }
 
-      @media (min-width: 400px) {
+      @media (min-width: 426px) {
         body {
           background: hsl(0, 0%, 100%);
         }
@@ -194,7 +174,139 @@
         }
       }
 
-      @media (max-width: 399px) {
+      @media (max-width: 425px) {
+        * {
+          margin: 0;
+        }
+
+        .container {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+        }
+
+        .result {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          height: 43%;
+          border-radius: 0 0 20px 20px;
+          text-align: center;
+          padding: 20px;
+          background-image: linear-gradient(#6743ff, #312cea);
+          box-sizing: border-box;
+        }
+
+        .result p {
+          padding-top: 10px;
+          font-size: 14px;
+          color: #c7b8ff;
+        }
+
+        .circle {
+          display: flex;
+          justify-content: center;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-image: linear-gradient(#4c22cc, #4633ed);
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        span {
+          display: flex;
+          font-size: 40px;
+          color: white;
+          font-weight: 800;
+          justify-content: center;
+        }
+
+        .great {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+
+        .inner {
+          padding: 0 38px;
+        }
+
+        .summary {
+          display: flex;
+          padding: 10px;
+          flex-direction: column;
+          box-sizing: border-box;
+        }
+
+        .score > p > span {
+          margin: 0;
+          display: inline-block;
+          font-size: large;
+          color: #a8a5a7;
+        }
+
+        .score > p {
+          margin: 0;
+          font-size: large;
+          font-weight: 700;
+          color: #000;
+        }
+
+        .subject {
+          margin: 8px 0;
+          height: 50px;
+          border-radius: 10px;
+          display: flex;
+          padding: 10px;
+          justify-content: space-between;
+          align-items: center;
+          box-sizing: border-box;
+        }
+
+        .title {
+          margin: 0;
+          display: flex;
+        }
+
+        .text {
+          margin: 0;
+          display: inline-block;
+        }
+
+        .reaction {
+          background: #fff6f5;
+          color: hsl(0, 100%, 67%);
+        }
+
+        .memory {
+          background: #fffbf2;
+          color: hsl(39, 100%, 56%);
+        }
+
+        .verbal {
+          background: #f2fbfa;
+          color: hsl(166, 100%, 37%);
+        }
+
+        .visual {
+          background: #f3f3fd;
+          color: #3a4399;
+        }
+
+        button {
+          margin-top: 20px;
+          height: 40px;
+          border: none;
+          border-radius: 20px;
+          background: #303b59;
+          color: #fff;
+        }
+
+        button:hover {
+          background: #553bf7;
+        }
       }
     </style>
   </head>
@@ -270,7 +382,7 @@
               <p class="text">Memory</p>
             </div>
             <div class="score">
-              <p>92 <span>/100</span></p>
+              <p>92 <span> / 100</span></p>
             </div>
           </div>
           <div class="subject verbal">
@@ -293,7 +405,7 @@
               <p class="text">Verbal</p>
             </div>
             <div class="score">
-              <p>61 <span>/100</span></p>
+              <p>61 <span> / 100</span></p>
             </div>
           </div>
           <div class="subject visual">
@@ -323,14 +435,14 @@
               <p class="text">Visual</p>
             </div>
             <div class="score">
-              <p>72 <span>/100</span></p>
+              <p>72 <span> / 100</span></p>
             </div>
           </div>
           <button>Continue</button>
         </div>
       </div>
     </div>
-    <div class="attribution">
+    <div class="attribution" style="font-size: xx-small; margin: 5px">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
